@@ -12,12 +12,15 @@ export const tasks = pgTable("tasks", {
 });
 
 export const selectTasksSchema = createSelectSchema(tasks);
-export const insertTasksSchema = createInsertSchema(tasks)
-  .required({
-    completed: true,
-  })
-  .omit({
-    id: true,
-    createdAt: true,
-    updatedAt: true,
-  });
+export const insertTasksSchema = createInsertSchema(
+  tasks,
+  {
+    title: schema => schema.min(1).max(500),
+  },
+).required({
+  completed: true,
+}).omit({
+  id: true,
+  createdAt: true,
+  updatedAt: true,
+});
