@@ -8,6 +8,13 @@
       "when": 1734794875141,
       "tag": "0000_stiff_ironclad",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1734796844757,
+      "tag": "0001_reflective_scalphunter",
+      "breakpoints": true
     }
   ]
 }
